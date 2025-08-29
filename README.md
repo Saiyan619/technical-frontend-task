@@ -1,10 +1,12 @@
 # Department Management
 
 This project is a Department Management application built using React and TypeScript with Vite as the build tool. It provides a user-friendly interface for managing departments and their associated roles within an organization.
+Live Preview Link: https://technical-frontend-task.vercel.app/
+Bonus Preview Link: https://technical-task-frontend.vercel.app/
 
 ## Features
 
-- Create, view, and manage departments.
+- Create, view, sort, search and manage departments.
 - Multi-step wizard for creating new departments.
 - Responsive design with Tailwind CSS.
 - Mock data for testing and development.
@@ -72,7 +74,7 @@ department-management
    npm run dev
    ```
 
-5. Open your browser and go to `http://localhost:3000` to view the application.
+5. Open your browser and go to `http://localhost:5173` to view the application.
 
 ## License
 
