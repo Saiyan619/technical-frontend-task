@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Search, ChevronDown, ChevronUp, X, Plus, ArrowLeft, ArrowRight, FileText } from 'lucide-react';
+import { X, Plus, FileText, } from 'lucide-react';
 import DepartmentTable from './components/DepartmentTable';
 import CreateDepartmentWizard from './components/CreateDepartmentWizard';
 import { mockDepartments } from '../../data/mockDepartments';
-import { mockRoles } from '../../data/mockRoles';
 
 const DepartmentManagementDashboard: React.FC = () => {
   const [departments, setDepartments] = useState(mockDepartments);

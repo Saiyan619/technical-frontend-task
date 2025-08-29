@@ -104,7 +104,7 @@ const DepartmentTable: React.FC<DepartmentTableProps> = ({ departments, onManage
             <td className="py-3 px-4 text-gray-900">{dept.roles}</td>
             <td className="py-3 px-4 text-gray-900">{dept.members}</td>
             <td className="py-3 px-4">
-              <Button variant="primary" size="sm" onClick={() => onManage(dept)}>
+              <Button variant="primary" onClick={() => onManage(dept)}>
                 MANAGE
               </Button>
             </td>

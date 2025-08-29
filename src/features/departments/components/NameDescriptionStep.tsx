@@ -1,4 +1,3 @@
-/* src/components/department/NameDescriptionStep.tsx */
 import React, { useState } from 'react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { FormData } from '@/types/Role';
@@ -63,7 +62,7 @@ const NameDescriptionStep: React.FC<NameDescriptionStepProps> = ({
         />
         {errors.description && <p className="text-red-500 text-sm">{errors.description}</p>}
       </div>
-      <div className="flex justify-between mt-8">
+      <div className="flex gap-3 justify-between sm:justify-end items-center mt-8">
         <Button variant="secondary" onClick={onBack}>
           <ArrowLeft size={16} className="mr-2" />
           BACK

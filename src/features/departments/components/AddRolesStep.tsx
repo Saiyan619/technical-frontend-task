@@ -1,4 +1,3 @@
-/* src/components/department/AddRolesStep.tsx */
 import React, { useState } from 'react';
 import { ArrowLeft, ArrowRight, Search, FileText, X } from 'lucide-react';
 import Button from '../../../components/Button';
@@ -58,11 +57,11 @@ const AddRolesStep: React.FC<AddRolesStepProps> = ({
   return (
     <div>
       <h3 className="text-lg font-medium text-gray-900 mb-6">Add Roles</h3>
-      <div className="grid grid-cols-2 gap-8">
+      <div className="flex flex-wrap gap-8">
         {/* Available Roles */}
         <div>
           <div className="mb-4">
-            <div className="flex items-center space-x-4 mb-4">
+            <div className="flex flex-col md:flex-row md:items-center gap-3 items-start mb-4">
               <div className="relative flex-1">
                 <Search
                   size={16}
@@ -73,7 +72,7 @@ const AddRolesStep: React.FC<AddRolesStepProps> = ({
                   placeholder="Search..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-10 w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="pl-10 w-full px-3 py-2 border-b-2 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <select
@@ -123,8 +122,8 @@ const AddRolesStep: React.FC<AddRolesStepProps> = ({
                         <td className="py-2 px-4 text-sm text-gray-900">{role.name}</td>
                         <td className="py-2 px-4 text-sm text-gray-600">{role.department}</td>
                         <td className="py-2 px-4">
-                          <Button size="sm" onClick={() => addRole(role)}>
-                            ADD
+                          <Button onClick={() => addRole(role)}>
+                            <span className='flex items-center ml-4'>ADD</span>
                           </Button>
                         </td>
                       </tr>
@@ -141,7 +140,7 @@ const AddRolesStep: React.FC<AddRolesStepProps> = ({
           </div>
         </div>
         {/* Selected Roles */}
-        <div>
+        <div className=' sm:w-2/6'>
           <div className="border rounded-lg">
             <div className="bg-gray-50 px-4 py-3 border-b">
               <h4 className="font-medium text-gray-900">
@@ -190,7 +189,7 @@ const AddRolesStep: React.FC<AddRolesStepProps> = ({
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-between mt-8">
+      <div className="flex gap-3 justify-between sm:justify-end items-center mt-8">
         <Button variant="secondary" onClick={onBack}>
           <ArrowLeft size={16} className="mr-2" />
           BACK
